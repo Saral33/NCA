@@ -14,11 +14,11 @@ module.exports = {
         preeti: ['Preeti']
       },
       colors: {
-        'primary-dark': '#242124',
-        'text-dark': '#F0F0F0',
-        'secondary-dark': '#7A6A5A',
-        'tertiary-dark': '#2D3238',
-        'border-dark': ' #9E9E9E'
+        'primary-dark': '#121212',
+        'text-dark': '#E0E0E0',
+        'secondary-dark': '#2e2e2e',
+        'tertiary-dark': '#242424',
+        'border-dark': '#374151'
       }
     }
   },

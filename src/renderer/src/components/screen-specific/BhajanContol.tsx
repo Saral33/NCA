@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Button } from '../ui/button'
-import { FullscreenIcon } from 'lucide-react'
+import { FullscreenIcon, IterationCw } from 'lucide-react'
 
 interface IProps {
   size: string
@@ -9,7 +9,7 @@ interface IProps {
 const BhajanContol = ({ setsize, size }: IProps): JSX.Element => {
   const [fullScreen, setFullScreen] = useState(false)
   return (
-    <div className="flex justify-center gap-5 w-full">
+    <div className="flex justify-center flex-col gap-5 w-full">
       <Button
         size="sm"
         onClick={() => {
@@ -45,7 +45,7 @@ const BhajanContol = ({ setsize, size }: IProps): JSX.Element => {
         -
       </Button>
       <Button size="sm" onClick={() => setsize('32px')}>
-        Default
+        <IterationCw />
       </Button>
     </div>
   )

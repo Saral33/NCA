@@ -11,7 +11,7 @@ const BhajanDetails = ({
 }): JSX.Element => {
   return (
     <div className="w-full mt-5 ">
-      <div style={{ fontSize: size }} className="flex text-white justify-center">
+      <div style={{ fontSize: size }} className="flex text-[#E0E0E0] justify-center">
         <span className="font-preeti">{changeEnglishNumberToNepali(num)}</span> )
         <div className="flex ml-5  flex-col">
           {song?.map((s) => (

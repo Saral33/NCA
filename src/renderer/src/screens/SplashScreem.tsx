@@ -14,7 +14,7 @@ const SplashScreen = (): JSX.Element => {
         }
         return prevPercentage + 1
       })
-    }, 30) // Adjust the delay (50ms) to control the loading speed
+    }, 1) // Adjust the delay (50ms) to control the loading speed
 
     return () => clearInterval(interval)
   }, [])

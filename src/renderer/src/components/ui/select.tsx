@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import * as React from 'react'
 import * as SelectPrimitive from '@radix-ui/react-select'
 import { Check, ChevronDown, ChevronUp } from 'lucide-react'
@@ -17,7 +18,7 @@ const SelectTrigger = React.forwardRef<
   <SelectPrimitive.Trigger
     ref={ref}
     className={cn(
-      'flex h-10 w-full items-center justify-between rounded-md border border-border-dark px-3 py-2 text-sm bg-tertiary-dark  placeholder:text-neutral-500 focus:outline-none    disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1 ',
+      'flex h-10 w-full items-center justify-between rounded-md border border-border-dark px-3 py-2 text-sm bg-tertiary-dark placeholder:text-neutral-500 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1',
       className
     )}
     {...props}

@@ -17,8 +17,11 @@ const BhajanDetailScreen = (): JSX.Element => {
   return (
     <div className="container  mx-auto ">
       <Navbar />
-      <div className="mx-5 mt-3">
-        <BhajanContol setsize={setSize} size={size} />
+      <div className="mx-5 ">
+        <div className="absolute bottom-5 right-3 ">
+          <BhajanContol setsize={setSize} size={size} />
+        </div>
+
         {type === 'B' ? (
           <BhajanDetails
             size={size}

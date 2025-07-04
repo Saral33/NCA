@@ -6,7 +6,7 @@ import SplashScreen from './screens/SplashScreem'
 const HomeScreen = lazy(() => import('./screens/HomeScreen'))
 const BhajanScreen = lazy(() => import('./screens/BhajanScreen'))
 const SongDetailsScreen = lazy(() => import('./screens/BhajanDetailScreen'))
-
+const BibleScreen = lazy(() => import('./screens/BibleScreen'))
 function App(): JSX.Element {
   const [showSplashScreen, setShowSplashScreen] = useState(true)
   useEffect(() => {
@@ -25,6 +25,10 @@ function App(): JSX.Element {
     {
       path: '/song-details',
       element: <SongDetailsScreen />
+    },
+    {
+      path: '/bible',
+      element: <BibleScreen />
     }
   ])
   return (

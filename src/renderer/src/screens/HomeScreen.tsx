@@ -14,10 +14,10 @@ const HomeScreen = (): JSX.Element => {
             <Icons types="Bhajan" />
             <p className="text-3xl font-medium mt-5">Bhajan Kitab</p>
           </div>
-          <div className="p-10 shadow-2xl relative cursor-pointer hover:bg-secondary-dark transition-all duration-200 flex items-center flex-col justify-center bg-tertiary-dark">
+          <div onClick={() => router('/bible')} className="p-10 shadow-2xl relative cursor-pointer hover:bg-secondary-dark transition-all duration-200 flex items-center flex-col justify-center bg-tertiary-dark">
             <Icons types="Bible" />
             <p className="text-3xl font-medium mt-5">Bible</p>
-            <div className="bg-red-500 absolute px-4 py-2 text-2xl text-white">Coming Soon</div>
+            {/* <div className="bg-red-500 absolute px-4 py-2 text-2xl text-white">Coming Soon</div> */}
           </div>
         </div>
       </div>

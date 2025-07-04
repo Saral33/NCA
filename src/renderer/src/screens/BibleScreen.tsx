@@ -2,20 +2,48 @@ import { useEffect, useState } from "react"
 import BibleNavbar from "../components/ui/bibleNavbar"
 import { bibleBooks } from "../expressions/bibleBooks"
 import { bookMapper } from "../mapper/bookMapper"
+import { ChevronLeft, ChevronRight } from "lucide-react"
 
 const BibleScreen = (): JSX.Element => {
     const [book, setBook] = useState<string>(bibleBooks[0]?.name)
     const [chapter, setChapter] = useState<number>(1)
     const [data, setData] = useState({})
+    const [currentBookData, setCurrentBookData] = useState(bibleBooks[0])
 
     useEffect(() => {
         setData(bookMapper(book))
         setChapter(1)
+        const currentBookData = bibleBooks?.find((boo) => boo.name === book)
+        if (currentBookData) {
+            setCurrentBookData(currentBookData)
+        }
     }, [book])
 
+    const actionHandler = (action: 'prev' | 'next') => {
+        if (action === 'prev') {
+            setChapter(chapter - 1)
+        } else {
+            setChapter(chapter + 1)
+        }
+    }
+
     return (
-        <div className="container mx-auto h-screen flex flex-col overflow-y-hidden">
-            <div className="mt-8 mx-5 flex flex-col flex-1">
+        <div className="container relative   mx-auto  h-screen flex flex-col overflow-y-hidden">
+            {chapter > 1 && (
+                <div onClick={() => actionHandler('prev')} className="absolute w-10 cursor-pointer top-[50%] left-10 bg-secondary-dark  h-[100px]">
+                    <div className="flex items-center justify-center h-full">
+                        <ChevronLeft size={50} />
+                    </div>
+                </div>)}
+            {chapter < currentBookData?.chapters && (
+                <div onClick={() => actionHandler('next')} className="absolute w-10 cursor-pointer top-[50%] right-10 bg-secondary-dark  h-[100px]">
+                    <div className="flex items-center justify-center h-full">
+                        <ChevronRight size={50} />
+                    </div>
+                </div>
+            )}
+            <div className="mt-8   mx-5 flex flex-col flex-1">
+
                 <BibleNavbar book={book} setBook={setBook} chapter={chapter} setChapter={setChapter} />
                 <div className="mt-8 flex flex-col">
                     <div className="text-2xl text-center mb-4 font-bold">{book} {chapter}</div>

@@ -20,7 +20,7 @@ export const bibleBooks = [
   { name: 'भजनसंग्रह', chapters: 150 },
   { name: 'हितोपदेश', chapters: 31 },
   { name: 'उपदेशक', chapters: 12 },
-  { name: 'सोलोमनको गीत', chapters: 8 },
+  { name: 'श्रेष्‍ठगीत', chapters: 8 },
   { name: 'यशैया', chapters: 66 },
   { name: 'यर्मिया', chapters: 52 },
   { name: 'विलाप', chapters: 5 },
